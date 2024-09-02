@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= MoarBrainz!
+NAME		= ThisIsBrain!
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -g -std=c++98

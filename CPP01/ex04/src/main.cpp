@@ -46,9 +46,8 @@ int main(int argc, char *argv[])
         std::cerr << "Too few or too many arguments!" << std::endl;
         return (1);
     }
-	std::string output(argv[1]);
     std::ifstream   inputFile(argv[1]);
-    std::ofstream   outputFile(output.append(".replace").c_str());
+    std::ofstream   outputFile("outfile.replace");
 
     if (!inputFile.is_open() || !outputFile.is_open())
     {

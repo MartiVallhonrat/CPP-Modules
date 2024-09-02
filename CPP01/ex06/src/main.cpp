@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 {
     Harl        Harl;
     std::string input;
+    int         key;
 
     if (argc != 2)
     {

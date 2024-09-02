@@ -54,26 +54,26 @@ void    Harl::error(void)
 void    Harl::complain(std::string level)
 {
 	int	i;
+	void	(Harl::*toComplain[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error}; 
 	std::string	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
     for(i = 0; i < 4; i++)
 	{
 		if (level == levels[i])
-		{
-			i++;
 			break;
-		}
-		if (i == 3)
-			i++;
 	}
+	i = 5;
     switch (i)
     {
         case 1:
             this->debug();
+            break;
         case 2:
             this->info();
+            break;
         case 3:
             this->warning();
+            break;
         case 4:
             this->error();
             break;
